@@ -12,9 +12,9 @@ bot.start((ctx) => {
       inline_keyboard: [
         [
           {
-            text: "Open App", // Button text
+            text: "Open App", 
             web_app: {
-              url: "https://vtonconnect.vercel.app", // Your web app URL
+              url: process.env.WEB_APP_URL,
             },
           },
         ],

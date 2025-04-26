@@ -28,4 +28,4 @@ bot.launch().then(() => {
   console.log("Bot is running and listening to messages...");
 });
 
-module.exports = bot; // Export bot in case you need it elsewhere
+module.exports = bot; 

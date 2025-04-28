@@ -7,6 +7,10 @@ const bot = new Telegraf(botToken);
 
 // Start command for the Telegram bot to show a simple button
 bot.start((ctx) => {
+  const chatId = ctx.chat.id;
+  const firstName = ctx.from.first_name;
+  console.log(`Chat ID: ${chatId}`);
+  console.log(`First Name: ${firstName}`);
   ctx.reply("Welcome! Click the button below:", {
     reply_markup: {
       inline_keyboard: [
@@ -23,9 +27,9 @@ bot.start((ctx) => {
   });
 });
 
-// Launch the bot and listen to messages
+// Start polling for updates (this is the default behavior)
 bot.launch().then(() => {
-  console.log("Bot is running and listening to messages...");
+  console.log("Bot is running and polling for updates...");
 });
 
 // Export the bot for use in other files

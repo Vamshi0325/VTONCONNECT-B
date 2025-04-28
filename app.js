@@ -2,14 +2,14 @@ const express = require("express");
 require("dotenv").config();
 
 // Import the bot from bot.js
-require("./bot");  // This will automatically initialize and launch the bot
+const bot = require("./bot"); // This will automatically initialize and launch the bot
 
 // Initialize the Express app
 const app = express();
 
 // Route to check if the server is running
 app.get("/", (req, res) => {
-  res.send("Hey this is my API running 🥳");
+  res.send("Hey, this is my API running 🥳");
 });
 
 // About route
